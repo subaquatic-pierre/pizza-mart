@@ -1,0 +1,264 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Hello, world!
+{% endblock title %}
+
+{% block main %}
+        <h1 class="text-center py-2 border-bottom">Our Menu</h1>
+        <div class="row">
+            <!-- Menu left comlumn -->
+            <div class="col-md-6 mt-5">   
+                <h4 class="text-center mb-2">Regular Pizzas</h4>             
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Small</th>
+                        <th scope="col">Large</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in regular_pizza %}                            
+                            {% if item.size == small %}
+                                <tr id="itemRow">
+                                <td id="itemName">{{item.name}}</td>
+                            {% endif %}
+                            {% if item.size == small %}
+                                <td id="itemPriceSmall">{{ item.price }}</td>
+                            {% endif %}
+                            {% if item.size == large %}
+                                <td id="itemPriceLarge">{{ item.price }}</td>
+                                </tr>
+                            {% endif %}                            
+                        {% endfor %}
+                    </tbody>
+                </table>    
+                <h4 class="text-center mb-2"> Sicilian Pizzas</h4>             
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Small</th>
+                        <th scope="col">Large</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in sicilian_pizza %}                            
+                            {% if item.size == small %}
+                                <tr>
+                                <td>{{item.name}}</td>
+                            {% endif %}
+                            {% if item.size == small %}
+                                <td>{{ item.price }}</td>
+                            {% endif %}
+                            {% if item.size == large %}
+                                <td>{{ item.price }}</td>
+                                </tr>
+                            {% endif %}                            
+                        {% endfor %}
+                    </tbody>
+                </table>    
+                <h4 class="text-center mb-2">Toppings</h4>             
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Item</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in toppings %}  
+                            <tr>
+                                <td>{{item.name}}</td>
+                            </tr>     
+                        {% endfor %}
+                    </tbody>
+                </table>    
+                <h4 class="text-center mb-2">Subs</h4>             
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Small</th>
+                        <th scope="col">Large</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in subs %}                            
+                            {% if item.size == small %}
+                                <tr>
+                                <td>{{item.name}}</td>
+                            {% endif %}
+                            {% if item.size == small %}
+                                <td>{{ item.price }}</td>
+                            {% endif %}
+                            {% if item.size == None %}
+                                <td>{{ item.name }}</td>
+                                <td></td>
+                                <td>{{ item.price }}</td>
+                                </tr>
+                            {% endif %}      
+                            {% if item.name == "Sausage, Peppers & Onions" %}       
+                                <td>{{ item.name }}</td>
+                                <td></td>
+                            {% endif %}        
+                            {% if item.size == large %}
+                                <td>{{ item.price }}</td>
+                                </tr>
+                            {% endif %}  
+                        {% endfor %}
+                    </tbody>
+                </table>    
+                <h4 class="text-center mb-2">Pasta</h4>             
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Large</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in pasta %}  
+                            <tr>  
+                                <td>{{item.name}}</td>                        
+                                <td>{{item.price}}</td>  
+                            </tr>                      
+                        {% endfor %}
+                    </tbody>
+                </table>    
+                <h4 class="text-center mb-2">Salads</h4>             
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Large</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in salads %}  
+                            <tr>  
+                                <td>{{item.name}}</td>                        
+                                <td>{{item.price}}</td>  
+                            </tr>                      
+                        {% endfor %}
+                    </tbody>
+                </table>    
+                <h4 class="text-center mb-2">Dinner Platters</h4>             
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Small</th>
+                        <th scope="col">Large</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in dinner_platters %}  
+                            {% if item.size == small %}
+                                <tr>
+                                <td>{{item.name}}</td>
+                            {% endif %}
+                            {% if item.size == small %}
+                                <td>{{ item.price }}</td>
+                            {% endif %}
+                            {% if item.size == large %}
+                                <td>{{ item.price }}</td>
+                                </tr>
+                            {% endif %}                            
+                        {% endfor %}
+                    </tbody>
+                </table>    
+            </div>
+            <!-- Menu left column -->
+
+            <!-- right column -->
+            <div class="col-md-1">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            <div class="col-md-5">
+                <ul id="cart">
+                    <h4 class="text-center">Cart</h4>
+                    <ul class="list-group">
+                    </ul>
+                </ul>
+            </div>
+            <!-- right column end -->
+        </div>
+
+
+
+
+
+        <!-- Options modal -->
+        <div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" id="modalClose" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Select Pizza toppings</h6>
+                            <p id="options-left"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <ul id="toppings-list">
+                                <!-- Toppings list to be added here -->
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul id="chosen-toppings-list">
+                                <!-- Toppings list to be added here -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                                <h6>Large or Small?</h6>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="large-radio" name="sizeradio" class="custom-control-input">
+                                    <label class="custom-control-label" for="large-radio">Large - </label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="small-radio" name="sizeradio" class="custom-control-input">
+                                    <label class="custom-control-label" for="small-radio">Small - </label>
+                                </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="modalCancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" data-dismiss="modal" id="modalCartAdd" class="btn btn-primary">Add to Cart</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+        {% verbatim %} 
+        <!-- Handlebar templates -->
+        <!-- Cart template -->
+        <script id="cart-item-script" type="text/x-handlebars-template">
+            {{ itemName }} - Small ${{ itemPriceSmall }} - Large${{ itemPriceLarge }} <span class="del-btn">X</span>
+        </script>
+
+        <!-- Modal Choice Template -->
+        <script id="modal-choice-script" type="text/x-handlebars-template">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action"></a>
+            </div>
+        </script>
+        {% endverbatim %}
+{% endblock main %}

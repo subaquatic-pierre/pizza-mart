@@ -1,0 +1,92 @@
+,item,category,toppings,size,price
+1,Cheese,Regular Pizza,,Small,12.7
+2,Cheese,Regular Pizza,,Large,17.95
+3,1 Topping,Regular Pizza,1,Small,13.7
+4,1 Topping,Regular Pizza,1,Large,19.95
+5,2 Toppings,Regular Pizza,2,Small,15.2
+6,2 Toppings,Regular Pizza,2,Large,21.95
+7,3 Toppings,Regular Pizza,3,Small,16.2
+8,3 Toppings,Regular Pizza,3,Large,23.95
+9,Special,Regular Pizza,5,Small,17.75
+10,Special,Regular Pizza,5,Large,25.95
+11,Cheese,Sicilian Pizza,,Small,24.45
+12,Cheese,Sicilian Pizza,,Large,38.7
+13,1 Item,Sicilian Pizza,1,Small,26.45
+14,1 Item,Sicilian Pizza,1,Large,40.7
+15,2 Items,Sicilian Pizza,2,Small,28.45
+16,2 Items,Sicilian Pizza,2,Large,42.7
+17,3 Items,Sicilian Pizza,3,Small,29.45
+18,3 Items,Sicilian Pizza,3,Large,44.7
+19,Special,Sicilian Pizza,5,Small,30.45
+20,Special,Sicilian Pizza,5,Large,45.7
+21,Pepperoni,Toppings,,,
+22,Sausage,Toppings,,,
+23,Mushrooms,Toppings,,,
+24,Onions,Toppings,,,
+25,Ham,Toppings,,,
+26,Canadian Bacon,Toppings,,,
+27,Pineapple,Toppings,,,
+28,Eggplant,Toppings,,,
+29,Tomato & Basil,Toppings,,,
+30,Green Peppers,Toppings,,,
+31,Hamburger,Toppings,,,
+32,Spinach,Toppings,,,
+33,Artichoke,Toppings,,,
+34,Buffalo Chicken,Toppings,,,
+35,Barbecue Chicken,Toppings,,,
+36,Anchovies,Toppings,,,
+37,Black Olives,Toppings,,,
+38,Fresh Garlic,Toppings,,,
+39,Zucchini,Toppings,,,
+40,Cheese,Subs,,Small,6.5
+41,Cheese,Subs,,Large,7.95
+42,Italian,Subs,,Small,6.5
+43,Italian,Subs,,Large,7.95
+44,Ham + Cheese,Subs,,Small,6.5
+45,Ham + Cheese,Subs,,Large,7.95
+46,Meatball,Subs,,Small,6.5
+47,Meatball,Subs,,Large,7.95
+48,Tuna,Subs,,Small,6.5
+49,Tuna,Subs,,Large,7.95
+50,Turkey,Subs,,Small,7.5
+51,Turkey,Subs,,Large,8.5
+52,Chicken Parmigiana,Subs,,Small,7.5
+53,Chicken Parmigiana,Subs,,Large,8.5
+54,Eggplant Parmigiana,Subs,,Small,6.5
+55,Eggplant Parmigiana,Subs,,Large,7.95
+56,Steak,Subs,,Small,6.5
+57,Steak,Subs,,Large,7.95
+58,Steak + Cheese,Subs,,Small,6.95
+59,Steak + Cheese,Subs,,Large,8.5
+60,S + C + Mushrooms,Subs,,,0.5
+61,S + C + Green Peppers,Subs,,,0.5
+62,S + C + Onions,Subs,,,0.5
+63,"Sausage, Peppers & Onions",Subs,,Large,8.5
+64,Hamburger,Subs,,Small,4.6
+65,Hamburger,Subs,,Large,6.95
+66,Cheeseburger,Subs,,Small,5.1
+67,Cheeseburger,Subs,,Large,7.45
+68,Fried Chicken,Subs,,Small,6.95
+69,Fried Chicken,Subs,,Large,8.5
+70,Veggie,Subs,,Small,6.95
+71,Veggie,Subs,,Large,8.5
+72,Extra Cheese,Subs,,,0.5
+73,Baked Ziti w/Mozzarella,Pasta,,,6.5
+74,Baked Ziti w/Meatballs,Pasta,,,8.75
+75,Baked Ziti w/Chicken,Pasta,,,9.75
+76,Garden Salad,Salads,,,6.25
+77,Greek Salad,Salads,,,8.25
+78,Antipasto,Salads,,,8.25
+79,Salad w/Tuna,Salads,,,8.25
+80,Garden Salad,Dinner Platters,,Small,35
+81,Garden Salad,Dinner Platters,,Large,60
+82,Greek Salad,Dinner Platters,,Small,45
+83,Greek Salad,Dinner Platters,,Large,70
+84,Antipasto,Dinner Platters,,Small,45
+85,Antipasto,Dinner Platters,,Large,70
+86,Baked Ziti,Dinner Platters,,Small,35
+87,Baked Ziti,Dinner Platters,,Large,60
+88,Meatball Parm,Dinner Platters,,Small,45
+89,Meatball Parm,Dinner Platters,,Large,70
+90,Chicken Parm,Dinner Platters,,Small,45
+91,Chicken Parm,Dinner Platters,,Large,80
