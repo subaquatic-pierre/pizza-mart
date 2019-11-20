@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Orders Success
+{% endblock title %}
+
+{% block main %}
+    <div class="col-md-8 text-center p-5">
+        <h1 class="text-success">Order Succes</h1>
+        <p class="">Check your email for updates</p>
+        <div>
+            <h5>{{ order }}</h5>
+        </div>
+        <ul>
+            {% for item in order_items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+            
+        </ul>
+    </div>
+
+{% endblock main %}

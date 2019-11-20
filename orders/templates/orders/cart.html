@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Cart
+{% endblock title %}
+
+{% load crispy_forms_tags %}
+{% load humanize %}
+
+{% block main %}
+    <div class="col-md-8">
+        <div class="row ">
+            <!-- start cart column -->
+            <div class="col-md-5 ">
+                <div class="row">
+                    <div class="col-md-12 mt-2 bg-info" id="cart-col">                            
+
+                        <div class="d-flex justify-content-between border-bottom py-2 my-2">
+                            <h1 class="text-center text-light flex-fill">Cart</h1>
+                            <h3 class="text-light">Total: {{ cart.total | floatformat:2 | intcomma  }}</3>
+
+                        </div>
+                        <div id="cart">                   
+                            
+                        </div>                        
+                    </div>                
+                </div>
+            </div>
+            <!-- end column cart column -->
+
+            <div class="col-md-4 offset-2">
+                <form action="/orders/place-order/" method="POST" id="place-order" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h1 class="text-center mt-3 mb-5 border-bottom pb-3">Delivery Address</h1>
+                    {{ form | crispy }}
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-outline-info" >Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // main cart div
+    const cartHtml = document.querySelector('#cart');
+</script>
+
+{% endblock main %}

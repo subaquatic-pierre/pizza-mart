@@ -3,25 +3,41 @@
 {% load crispy_forms_tags %}
 
 {% block main %}
-<div class="content-section">
-    <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-        <div class="media-body">
+<div class="col-md-8">
+    <div class="row justify-content-center pt-3">
+        <div class="col-md-4">
             <h2 class="account-heading">{{ user.username }}</h2>
             <p class="text-secondary">{{ user.email }}</p>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Profile Info</legend>
+                    {{ u_form | crispy }}
+                    <legend class="border-bottom mb-4">Address Details</legend>
+                    {{ p_form | crispy }}   
+                </fieldset>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline-info">Update</button>
+                </div>
+            </form>
+        </div>  
+        <div class="col-md-4 offset-2">
+            
+            {% if user.is_superuser %}
+            <!-- <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Admin</legend>
+                    <label for="product-sheet">Upload Products</label>
+                    <input type="file" name="product-sheet" id="product-sheet">
+                    <input class="btn btn-success" type="submit" name="product-sheet-submit" id="product-sheet-submit" value="Upload">
+                </fieldset> 
+            </form>
+            <a href="/orders/" class="btn btn-primary">View Orders</a>
+            {% endif %} -->
+
         </div>
-    </div>
-    <form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Profile Info</legend>
-            {{ u_form | crispy }}
-            {{ p_form | crispy }}   
-        </fieldset>
-        <div class="form-group">
-            <button type="submit" class="btn btn-outline-info">Update</button>
-        </div>
-    </form>   
+    </div> 
 </div>
 
 {% endblock %}

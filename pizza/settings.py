@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [    
     'crispy_forms',
     'users.apps.UsersConfig',
     'products.apps.ProductsConfig',
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Cripsy form setting
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Profile settings
+
+LOGIN_REDIRECT_URL = 'products_menu'
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'products_menu'

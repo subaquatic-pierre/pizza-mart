@@ -1,5 +1,8 @@
 {% load static %}
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,34 +24,88 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Pizza Life</a>
+                <a class="navbar-brand" href="{% url 'products_menu' %}">Pizza Life</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav ml-auto"> 
+                        {% if user.is_superuser %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'order_list' %}">Orders</a>
+                        </li>
+                        {% endif %}        
+                    {% if user.is_authenticated %}                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                        </li>                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">{{ user.username }}</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Register</a>
+                        </li>
+                    {% endif %}     
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container mt-2 mb-5">
-        {% block main %}{% endblock main %}
+    <main class="container-fluid mt-2 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 ">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>            
+        </div>
+        <div class="row justify-content-center">            
+            {% block main %}{% endblock main %}
+        </div>
     </main>
+
+    {% verbatim %} 
+
+        <script id="cart-item-script" type="text/x-handlebars-template">
+            <span data-index="{{ index }}" class="del-btn">X</span>
+            <h5>{{ category }}</h5>
+            <div class="d-flex justify-content-between">
+                <p class="">{{ itemName }} 
+                    {{#if size}}
+                        - {{ size }}
+                    {{/if}} 
+                </p>
+                <h6 class="">$ {{ price }}</h6>
+            </div>
+            {{#if toppings}}
+            <ul>
+                <li class="mb-1 pb-1 border-bottom w-50"><b>Toppings:</b></li>
+                {{#each toppings}}
+                <li>
+                    {{ this }}
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </script>
+
+    {% endverbatim %}
+
+    
     
     <script src="{% static 'main/js/jquery.js' %}" ></script>
     <script src="{% static 'main/js/popper.js' %}" ></script>
     <script src="{% static 'main/js/bootstrap.js' %}" ></script>
     <script src="{% static 'main/js/handlebars.js' %}" ></script>
     <script src="{% static 'main/js/main.js' %}" ></script>
+    
 </body>
 </html>

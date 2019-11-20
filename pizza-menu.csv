@@ -38,39 +38,39 @@
 37,Black Olives,Toppings,,,
 38,Fresh Garlic,Toppings,,,
 39,Zucchini,Toppings,,,
-40,Cheese,Subs,,Small,6.5
-41,Cheese,Subs,,Large,7.95
-42,Italian,Subs,,Small,6.5
-43,Italian,Subs,,Large,7.95
-44,Ham + Cheese,Subs,,Small,6.5
-45,Ham + Cheese,Subs,,Large,7.95
-46,Meatball,Subs,,Small,6.5
-47,Meatball,Subs,,Large,7.95
-48,Tuna,Subs,,Small,6.5
-49,Tuna,Subs,,Large,7.95
-50,Turkey,Subs,,Small,7.5
-51,Turkey,Subs,,Large,8.5
-52,Chicken Parmigiana,Subs,,Small,7.5
-53,Chicken Parmigiana,Subs,,Large,8.5
-54,Eggplant Parmigiana,Subs,,Small,6.5
-55,Eggplant Parmigiana,Subs,,Large,7.95
-56,Steak,Subs,,Small,6.5
-57,Steak,Subs,,Large,7.95
-58,Steak + Cheese,Subs,,Small,6.95
-59,Steak + Cheese,Subs,,Large,8.5
-60,S + C + Mushrooms,Subs,,,0.5
-61,S + C + Green Peppers,Subs,,,0.5
-62,S + C + Onions,Subs,,,0.5
-63,"Sausage, Peppers & Onions",Subs,,Large,8.5
-64,Hamburger,Subs,,Small,4.6
-65,Hamburger,Subs,,Large,6.95
-66,Cheeseburger,Subs,,Small,5.1
-67,Cheeseburger,Subs,,Large,7.45
-68,Fried Chicken,Subs,,Small,6.95
-69,Fried Chicken,Subs,,Large,8.5
-70,Veggie,Subs,,Small,6.95
-71,Veggie,Subs,,Large,8.5
-72,Extra Cheese,Subs,,,0.5
+40,Cheese,Subs,1,Small,6.5
+41,Cheese,Subs,1,Large,7.95
+42,Italian,Subs,1,Small,6.5
+43,Italian,Subs,1,Large,7.95
+44,Ham + Cheese,Subs,1,Small,6.5
+45,Ham + Cheese,Subs,1,Large,7.95
+46,Meatball,Subs,1,Small,6.5
+47,Meatball,Subs,1,Large,7.95
+48,Tuna,Subs,1,Small,6.5
+49,Tuna,Subs,1,Large,7.95
+50,Turkey,Subs,1,Small,7.5
+51,Turkey,Subs,1,Large,8.5
+52,Chicken Parmigiana,Subs,1,Small,7.5
+53,Chicken Parmigiana,Subs,1,Large,8.5
+54,Eggplant Parmigiana,Subs,1,Small,6.5
+55,Eggplant Parmigiana,Subs,1,Large,7.95
+56,Steak,Subs,1,Small,6.5
+57,Steak,Subs,1,Large,7.95
+58,Steak + Cheese,Subs,4,Small,6.95
+59,Steak + Cheese,Subs,4,Large,8.5
+60,S + C + Mushrooms,Toppings,,,0.5
+61,S + C + Green Peppers,Toppings,,,0.5
+62,S + C + Onions,Toppings,,,0.5
+63,"Sausage, Peppers & Onions",Subs,1,Large,8.5
+64,Hamburger,Subs,1,Small,4.6
+65,Hamburger,Subs,1,Large,6.95
+66,Cheeseburger,Subs,1,Small,5.1
+67,Cheeseburger,Subs,1,Large,7.45
+68,Fried Chicken,Subs,1,Small,6.95
+69,Fried Chicken,Subs,1,Large,8.5
+70,Veggie,Subs,1,Small,6.95
+71,Veggie,Subs,1,Large,8.5
+72,Extra Cheese,Toppings,,,0.5
 73,Baked Ziti w/Mozzarella,Pasta,,,6.5
 74,Baked Ziti w/Meatballs,Pasta,,,8.75
 75,Baked Ziti w/Chicken,Pasta,,,9.75
