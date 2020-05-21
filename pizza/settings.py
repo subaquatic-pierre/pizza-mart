@@ -123,6 +123,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
+# Django storages
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_DEFAULT_ACL = 'public-read'
+AWS_QUERYSTRING_AUTH = False
+
 # Django storage
 DEFAULT_FILE_STORAGE = 'pizza.custom_storage.MediaStorage'
 STATICFILES_STORAGE = 'pizza.custom_storage.StaticStorage'
