@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i0&iq&e9u9h6(4_7%pt2s9)f=c$kso=k$c$w@fi9215s=1q0^d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['pizza-cool-app.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,8 +124,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 # Django storage
-DEFAULT_FILE_STORAGE = 'scubadivedubai.custom_storage.MediaStorage'
-STATICFILES_STORAGE = 'scubadivedubai.custom_storage.StaticStorage'
+DEFAULT_FILE_STORAGE = 'pizza.custom_storage.MediaStorage'
+STATICFILES_STORAGE = 'pizza.custom_storage.StaticStorage'
 
 # Cripsy form setting
 
