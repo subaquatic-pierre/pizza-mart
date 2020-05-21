@@ -61,6 +61,7 @@ def place_order(request):
             messages.success(request, 'Your order has been plced successfully')
             return redirect('order_detail', order.id)
 
+
 class OrderList(PermissionRequiredMixin, ListView):
     permission_required = 'staff'
     model = Order

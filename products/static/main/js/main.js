@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // check if user has local storage
     // set cart index to local storage or 0
     if (!localStorage.getItem('cart')) {
-        cartIndex = 0;
+        cartIndex = 0; 
     } else {
         cart = JSON.parse(localStorage.getItem('cart'))
         if (Object.keys(cart).length === 0) {
