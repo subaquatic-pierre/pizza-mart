@@ -120,10 +120,12 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static_root/'
+MEDIA_URL = '/media/'
+
+# Django storage
+DEFAULT_FILE_STORAGE = 'scubadivedubai.custom_storage.MediaStorage'
+STATICFILES_STORAGE = 'scubadivedubai.custom_storage.StaticStorage'
 
 # Cripsy form setting
 
